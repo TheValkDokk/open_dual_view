@@ -23,6 +23,10 @@ abstract class OpenDualViewPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  Future<OpenDualViewResult> openInDualView(String? packageName, String? uri);
+
+  Future<List<String>> getAvailablePackagesName();
+
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
