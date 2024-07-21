@@ -61,6 +61,16 @@ Use getAvailablePackagesName to retrieve the list of available package name that
 
 The `open_dual_view` package is designed to work on Android devices that support dual view mode, starting from Android SDK 30 (Android 11) and up. 
 
+- **Minimum SDK Version**: This package requires a minimum SDK version of 30 (Android 11). Make sure your `android/app/build.gradle` file reflects this requirement:
+
+  ```gradle
+  android {
+      defaultConfig {
+          minSdkVersion 30
+      }
+  }
+  ```
+
 **Important Notes:**
 
 - **Android 11 (API level 30)** and later versions introduced changes in how apps can query other apps. The `<queries>` element in the `AndroidManifest.xml` is used to declare which packages your app intends to query. Ensure that your app includes the necessary `<queries>` element to specify the packages you need to interact with.

@@ -30,7 +30,7 @@ class MethodChannelOpenDualView extends OpenDualViewPlatform {
         );
       }
 
-      await methodChannel.invokeMethod<String>(
+      await methodChannel.invokeMethod(
         'openDualView',
         {'packageName': packageName, 'uri': uri},
       );
